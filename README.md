@@ -1,1 +1,7 @@
-Java webservice using a lightweight Grizzly + Jersey setup
+Java webservice using a lightweight Grizzly + Jersey setup.
+
+Run this via Main.main()
+
+This runs on port 5000 (conveniently configured for deployment to aws elastic beanstalk).
+
+Sample endpoint: http://localhost:5000/gws/test/json
