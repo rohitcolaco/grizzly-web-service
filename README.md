@@ -1,4 +1,4 @@
-Java web service (configured as a micro service) using a lightweight Grizzly + Jersey setup.
+Mavenized Java web service (configured as a micro service) using a lightweight Grizzly + Jersey setup.
 
 Run this via Main.main()
 
