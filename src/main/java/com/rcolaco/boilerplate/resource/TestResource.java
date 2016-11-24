@@ -14,13 +14,6 @@ import com.rcolaco.boilerplate.model.Status;
 public class TestResource extends ResourceConfig
 {
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getIt()
-    {
-        return "Got it!";
-    }
-
-    @GET
     @Path("/json")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getJson()
