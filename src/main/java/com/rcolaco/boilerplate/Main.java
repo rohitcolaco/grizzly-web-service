@@ -1,5 +1,6 @@
 package com.rcolaco.boilerplate;
 
+import main.java.com.rcolaco.boilerplate.filter.AuthenticationFilter;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -16,6 +17,7 @@ public class Main
     public static HttpServer startServer()
     {
         final ResourceConfig rc = new ResourceConfig().packages("com.rcolaco.boilerplate.resource");
+        rc.register(AuthenticationFilter.class);
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
     }
 
