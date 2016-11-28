@@ -41,9 +41,16 @@ public class TestResource extends ResourceConfig
     {
         if (sUsername.equals("admin") && sPassword.equals("password"))
         {
-            Jwt j = new Jwt();
-            j.setToken(AuthenticationFilter.getToken(1, 101));
-            return Response.ok().entity(j).build();
+            try
+            {
+                Jwt j = new Jwt();
+                j.setToken(AuthenticationFilter.getToken(1, 101));
+                return Response.ok().entity(j).build();
+            } catch (Throwable th)
+            {
+                th.printStackTrace();
+                throw th;
+            }
         }
         return Response.status(Response.Status.UNAUTHORIZED).build();
     }
