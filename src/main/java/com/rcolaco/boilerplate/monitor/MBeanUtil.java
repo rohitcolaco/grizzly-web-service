@@ -1,4 +1,4 @@
-package main.java.com.rcolaco.boilerplate.monitor;
+package com.rcolaco.boilerplate.monitor;
 
 import javax.management.MBeanInfo;
 import javax.management.MBeanServer;

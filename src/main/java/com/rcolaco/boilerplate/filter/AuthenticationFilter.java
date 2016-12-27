@@ -1,4 +1,4 @@
-package main.java.com.rcolaco.boilerplate.filter;
+package com.rcolaco.boilerplate.filter;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

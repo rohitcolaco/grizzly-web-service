@@ -11,8 +11,8 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import main.java.com.rcolaco.boilerplate.filter.AuthenticationFilter;
-import main.java.com.rcolaco.boilerplate.model.Jwt;
+import com.rcolaco.boilerplate.filter.AuthenticationFilter;
+import com.rcolaco.boilerplate.model.Jwt;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import javax.annotation.security.PermitAll;

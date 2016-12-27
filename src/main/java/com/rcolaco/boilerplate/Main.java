@@ -1,8 +1,8 @@
 package com.rcolaco.boilerplate;
 
 import com.owlike.genson.ext.jaxrs.GensonJsonConverter;
-import main.java.com.rcolaco.boilerplate.filter.AuthenticationFilter;
-import main.java.com.rcolaco.boilerplate.monitor.TestMonitor;
+import com.rcolaco.boilerplate.filter.AuthenticationFilter;
+import com.rcolaco.boilerplate.monitor.TestMonitor;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.StaticHttpHandler;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
