@@ -55,7 +55,8 @@ public class AuthenticationFilter implements javax.ws.rs.container.ContainerRequ
         final String sAuthorization = rc.getHeaderString(HttpHeaders.AUTHORIZATION);
         if (sAuthorization == null || !sAuthorization.startsWith("Bearer "))
         {
-            rc.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
+            rc.abortWith(Response.status(Response.Status.UNAUTHORIZED).entity("Missing authentication credentials").build());
+            return;
         }
 
         final String sToken = sAuthorization.substring("Bearer".length()).trim();

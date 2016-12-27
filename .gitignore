@@ -3,6 +3,7 @@
 target
 src/main/webapp/dependencies
 *.iml
+swagger-ui
 
 ### Node ###
 # Logs
