@@ -1,0 +1,5 @@
+!com.rcolaco.boilerplate.configuration.Configuration
+  text: Rohit Colaço
+  numeric: 10
+  inner: !com.rcolaco.boilerplate.configuration.Configuration$NestedConfiguration
+    enabled: true
