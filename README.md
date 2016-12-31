@@ -11,5 +11,8 @@ Features:
 * Jersey REST API
 * Jackson Mashalling
 * Jwt Authentication / Authorization
+* Dispatching an async job to Amazon's SQS
+* Sending an email via SendGrid
+* Server Side Events (w/ Jersey)
 * MBean Monitoring
 * Swagger UI
