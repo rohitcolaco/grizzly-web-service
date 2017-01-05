@@ -2,9 +2,11 @@ package com.rcolaco.boilerplate;
 
 import com.owlike.genson.ext.jaxrs.GensonJsonConverter;
 import com.rcolaco.boilerplate.configuration.ConfigurationProvider;
+import com.rcolaco.boilerplate.httphandler.FileUploadHandler;
 import com.rcolaco.boilerplate.filter.AuthenticationFilter;
 import com.rcolaco.boilerplate.monitor.TestMonitor;
 import org.glassfish.grizzly.http.server.HttpServer;
+import org.glassfish.grizzly.http.server.ServerConfiguration;
 import org.glassfish.grizzly.http.server.StaticHttpHandler;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -38,7 +40,13 @@ public class Main
         System.out.println(String.format("Jersey app started with WADL available at "
             + "%sapplication.wadl", BASE_URI));
 
-        server.getServerConfiguration().addHttpHandler(new StaticHttpHandler("c:\\code\\personal\\static-web\\public\\swagger-ui"), "/swagger");
+        final ServerConfiguration sc = server.getServerConfiguration();
+
+        final StaticHttpHandler shhSwagger = new StaticHttpHandler("c:\\code\\personal\\static-web\\public\\swagger-ui");
+        sc.addHttpHandler(shhSwagger, "/swagger");
+
+        final FileUploadHandler fuh = new FileUploadHandler();
+        sc.addHttpHandler(fuh, "/gws/fileupload");
     }
 
     /**

@@ -16,3 +16,4 @@ Features:
 * Server Side Events (w/ Jersey)
 * MBean Monitoring
 * Swagger UI
+* File Upload http handler
